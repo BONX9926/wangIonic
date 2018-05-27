@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <img src="assets/imgs/{{ wang.images[0] }}" />
+  <ion-card-content>
+    <ion-card-title class="title">
+      {{ wang.title }}
+    </ion-card-title>
+    <p class="detail">
+      {{ wang.detail }}
+      {{ wang.images }}
+      {{ wang }}
+    </p>
+  </ion-card-content>
+  <div id="map_canvas"></div>
+  <ion-slides pager class="slide">
+
+    <ion-slide>
+      <img src="assets/imgs/{{ wang.images[0] }}" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/{{ wang.images[1] }}" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/imgs/{{ wang.images[2] }}" />
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
