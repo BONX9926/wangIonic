@@ -1,6 +1,6 @@
 <ion-content>
   <div id="floating-panel">
-    <b>Start: </b>
+    <b>ต้นทาง: </b>
     <select [(ngModel)]="start" id="start" (change)="calculateAndDisplayRoute()">
       <option value="13.7500301,100.4890995">พระบรมหาราชวัง</option>
       <option value="13.7500299,100.4825334">พระราชวังเดิม</option>
@@ -27,7 +27,7 @@
       <option value="13.7568933,100.5354011">วังสวนผักกาด</option>
       <option value="13.7482025,100.5310779">วังสระปทุม</option>
     </select><br>
-    <b>End: </b>
+    <b>ปลายทาง: </b>
     <select [(ngModel)]="end" id="end" (change)="calculateAndDisplayRoute()">
       <option value="13.7500301,100.4890995">พระบรมหาราชวัง</option>
       <option value="13.7500299,100.4825334">พระราชวังเดิม</option>
@@ -55,6 +55,7 @@
       <option value="13.7482025,100.5310779">วังสระปทุม</option>
     </select>
     <br>
+    <b>เดินทางโดย: </b>
     <select [(ngModel)]="mode" id="mode" (change)="calculateAndDisplayRoute()">
       <option value="DRIVING">ขับรถ</option>
       <option value="BICYCLING">รถจักรยาน</option>
@@ -62,6 +63,8 @@
       <option value="WALKING">เดินเท้า</option>
     </select>
     </div>
-    <div #map id="map"></div>
+    <div id="maphight">
+      <div #map id="map"></div>
+    </div>
     <div id="right-panel"></div>
 </ion-content>

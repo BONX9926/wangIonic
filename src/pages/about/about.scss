@@ -1,8 +1,4 @@
 #floating-panel {
-    // position: absolute;
-    top: 10px;
-    right: 5px;
-    z-index: 5;
     background-color: #fff;
     padding: 5px;
     border: 1px solid #999;
@@ -10,11 +6,23 @@
     line-height: 30px;
     padding-left: 10px;
   }
-  #map {
-    height: 50%;
+
+  #maphight {
+    height: 200px;
+  }
+  #right-panel {
+    overflow: auto;
+  }
+  
+  select {
+    height: 30px;
+    border-color: #D6DBDF;
+    border-radius: 5px;
+    background-color: #D6DBDF;
+    color: #566573;
+    width: 100%;
   }
 
-  #right-panel {
-    height: 50%;
-    overflow: auto;
+  b {
+    color:#566573;
   }
