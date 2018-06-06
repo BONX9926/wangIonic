@@ -174,34 +174,34 @@ export class ContactPage {
       title: 'วังสระปทุม'
     });
 
-    this.addMark(marker1, 'พระบรมมหาราชวัง', this.map)
-    this.addMark(marker2, 'พระราชวังเดิม', this.map)
-    this.addMark(marker3, 'พระราชวังเดิม', this.map)
-    this.addMark(marker4, 'พระราชวังเดิม', this.map)
-    this.addMark(marker5, 'พระราชวังเดิม', this.map)
-    this.addMark(marker6, 'พระราชวังเดิม', this.map)
-    this.addMark(marker7, 'พระราชวังเดิม', this.map)
-    this.addMark(marker8, 'พระราชวังเดิม', this.map)
-    this.addMark(marker9, 'พระราชวังเดิม', this.map)
-    this.addMark(marker10, 'พระราชวังเดิม', this.map)
-    this.addMark(marker11, 'พระราชวังเดิม', this.map)
-    this.addMark(marker12, 'พระราชวังเดิม', this.map)
-    this.addMark(marker13, 'พระราชวังเดิม', this.map)
-    this.addMark(marker14, 'พระราชวังเดิม', this.map)
-    this.addMark(marker15, 'พระราชวังเดิม', this.map)
-    this.addMark(marker16, 'พระราชวังเดิม', this.map)
-    this.addMark(marker17, 'พระราชวังเดิม', this.map)
-    this.addMark(marker18, 'พระราชวังเดิม', this.map)
-    this.addMark(marker19, 'พระราชวังเดิม', this.map)
-    this.addMark(marker20, 'พระราชวังเดิม', this.map)
-    this.addMark(marker21, 'พระราชวังเดิม', this.map)
-    this.addMark(marker22, 'พระราชวังเดิม', this.map)
-    this.addMark(marker23, 'พระราชวังเดิม', this.map)
-    this.addMark(marker24, 'พระราชวังเดิม', this.map)
+    this.addMark(marker1, this.map)
+    this.addMark(marker2, this.map)
+    this.addMark(marker3, this.map)
+    this.addMark(marker4, this.map)
+    this.addMark(marker5, this.map)
+    this.addMark(marker6, this.map)
+    this.addMark(marker7, this.map)
+    this.addMark(marker8, this.map)
+    this.addMark(marker9, this.map)
+    this.addMark(marker10, this.map)
+    this.addMark(marker11, this.map)
+    this.addMark(marker12, this.map)
+    this.addMark(marker13, this.map)
+    this.addMark(marker14, this.map)
+    this.addMark(marker15, this.map)
+    this.addMark(marker16, this.map)
+    this.addMark(marker17, this.map)
+    this.addMark(marker18, this.map)
+    this.addMark(marker19, this.map)
+    this.addMark(marker20, this.map)
+    this.addMark(marker21, this.map)
+    this.addMark(marker22, this.map)
+    this.addMark(marker23, this.map)
+    this.addMark(marker24, this.map)
   }
-  addMark(marker, text, map) {
+  addMark(marker, map) {
     let infowindow = new google.maps.InfoWindow({
-      content: text
+      content: marker.title
     });
     marker.addListener('click', function() {
       infowindow.open(map, marker);

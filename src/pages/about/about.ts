@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 declare var google:any;
 
@@ -15,7 +15,7 @@ export class AboutPage {
   mode = 'DRIVING';
   directionsService = new google.maps.DirectionsService;
   directionsDisplay = new google.maps.DirectionsRenderer;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController) {
 
   }
 
@@ -43,7 +43,12 @@ export class AboutPage {
         this.directionsDisplay.setDirections(response);
       } else {
         // window.alert('Directions request failed due to ' + status);
-
+        const alert = this.alertCtrl.create({
+          title: 'Not Found!',
+          subTitle: 'ไม่พบเส้นทาง',
+          buttons: ['OK']
+        });
+        alert.present();
       }
     });
   }
