@@ -10,7 +10,6 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ApiProvider {
   constructor(public http: Http) {
-    console.log('Hello ApiProvider Provider');
     this.getWang();
   }
   getWang() {
@@ -18,7 +17,6 @@ export class ApiProvider {
       this.http.get('http://nisakorn.com/student/chanika/index.php/api/getwang')
       .map(res => res.json())
       .subscribe((data: any) => {
-        console.log(data);
         resolve(data)
       }, error => {
         reject(error)
